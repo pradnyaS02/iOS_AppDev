@@ -24,7 +24,6 @@ class tableViewCell:UITableViewCell{
 }
 
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
-    var edit = 8
    
     var dbManager = DBManager()
     

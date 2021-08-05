@@ -22,12 +22,15 @@ class AddNewStudentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let tap = UITapGestureRecognizer(target: self, action: #selector(doneButtonAction))
+            view.addGestureRecognizer(tap)
+        
         self.addToolbar()
         if id != 0 {
             label.text="UPDATE \(id) DATA"
             saveButton.setTitle("UPDATE", for: .normal)
         }
-        
         saveButton.addTarget(self, action: #selector(saveNewInfo), for: .touchUpInside)
 
     }
